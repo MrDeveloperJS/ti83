@@ -5,9 +5,7 @@ export class AdClass extends React.Component {
     super(props);
     const initialAds = [
       { text: 'AD #1', alt: 'Google', url: 'http://www.google.com', img: 'http://placehold.it/600/61a65' },
-      { text: 'AD #2', alt: 'Yahoo', url: 'http://www.yahoo.com', img: 'http://placehold.it/600/f9cee5' },
-      { text: '', alt: 'Bing', url: 'http://www.bing.com', img: 'http://placehold.it/600/fdf73e' },
-      { text: 'AD #4', alt: 'MSN', url: 'http://www.msn.com', img: 'http://placehold.it/600/9c184f' }
+      { text: 'AD #2', alt: 'Yahoo', url: 'http://www.yahoo.com', img: 'http://placehold.it/600/f9cee5' }
       ];
     this.state = { ads: initialAds };
   }
@@ -23,7 +21,7 @@ export class AdClass extends React.Component {
       console.log(data.title);
       var newAd = {text: 'AD #'+data.id, alt: data.title, url: 'http://www.woot.com', img: data.url}
       var newAds = this.state.ads;
-      newAds[2] = newAd;
+      newAds[1] = newAd;
       this.setState({ads: newAds});
     }.bind(this));
 
